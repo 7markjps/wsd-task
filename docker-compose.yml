@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  cert-feed-generator:
+    build: .
+    image: cert-feed-generator:latest
+    container_name: cert-feed-generator
+    command: ["${THREADS:-10}", "${QUOTES:-50}"]
