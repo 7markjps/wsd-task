@@ -196,6 +196,41 @@ Example:
 
 ---
 
+## 6. Export Test Results as HTML Report
+
+Run tests and generate an HTML report in one command:
+
+```bash
+mvn clean test surefire-report:report -DshowSuccess=true
+```
+
+The HTML report is generated at:
+
+```
+target/reports/surefire.html
+```
+
+Open it in your browser:
+
+```bash
+# Windows
+start target/reports/surefire.html
+
+# Mac
+open target/reports/surefire.html
+
+# Linux
+xdg-open target/reports/surefire.html
+```
+
+The report includes:
+- Summary (total tests, pass/fail/skip counts, success rate)
+- Per-class breakdown (AppTest, IsinGeneratorTest, CertificateUpdateTest, CertificateUpdateGeneratorTest)
+- Individual test results with execution times
+- Failure details (if any)
+
+---
+
 ## Results
 
 ### Certificate Generation (10 threads, 50 quotes)
